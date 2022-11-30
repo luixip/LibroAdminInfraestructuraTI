@@ -1,0 +1,117 @@
+\documentclass[12pt,fleqn,openany,letter]{book}
+\usepackage{appendix}
+\usepackage{minted}
+\input{estructura.tex}
+
+
+%%% By Luixip
+\usepackage{graphicx}
+\usepackage{fancybox}
+\usepackage{color}
+\usepackage{float} % para usar [H] en figuras y tablas
+\usepackage[none]{hyphenat}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{wrapfig}
+\usepackage{wrapfig, blindtext}
+\usepackage[section]{placeins}
+\usepackage[export]{adjustbox}
+\usepackage{pdfpages}
+%\usepackage{acronym}
+
+%\usepackage{ragged2e} % para justicar texto
+
+%\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+%\usepackage[table]{xcolor}
+
+%\usepackage{colortbl}
+
+
+%\usepackage{tabularx}
+%\usepackage{multirow, array} % para las tablas
+%\usepackage{array} % para las tablas
+%\usepackage{longtable}
+%\usepackage[footnotesize,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage[footnotesize,labelfont=bf,up,textfont=it,up, center]{caption} % Custom captions under/above floats in tables or figures
+
+%\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they
+\usepackage{graphicx} % paquete que permite introducir imágenes
+\usepackage{booktabs} % Horizontal rules in tables
+%\usepackage{float} % Required for tables and figures in the multi-column environment - they
+
+\usepackage{ftnxtra} % Permite color los pie de página en el Caption de las figuras.
+
+%\usepackage{sectsty}
+
+% Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{equation}{section}
+% Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section}
+% Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section}
+
+\usepackage{parskip}
+%%%%%%%%%%%\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+\definecolor{AzulTitulo}{RGB}{18,42,68}
+
+
+
+%% Manejo de acrónimos
+\usepackage[acronym]{glossaries}
+%\makeglossaries
+\makeglossaries
+\glossarystyle{altlistgroup}
+\input{glosario.tex}
+\input{acronimos.tex}
+\renewcommand{\glossaryname}{Glosario}
+\renewcommand{\acronymname}{Acrónimos}
+
+
+%%\usepackage{hyperref} % By luixip
+
+
+% para Cambiar "y col." por "et al."
+\DefineBibliographyStrings{spanish}{
+    andothers = {et\addabbrvspace al\adddot},
+    andmore   = {et\addabbrvspace al\adddot}
+}
+
+% Para controlar la produndida de las secciones mostradas en la tabla de contenido
+\setcounter{tocdepth}{2}
+% Para enumerar subsecciones (nivel de profundidad)
+\setcounter{secnumdepth}{3}
+
+
+% Indicando la distancia entre párrafos (ojo!!)
+%\setlength{\parskip}{8mm}
+\usepackage{titlesec}
+
+% Definition of \subparagraph starting new line after heading
+\titleformat{\subparagraph}
+{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{\parindent}{1.25ex plus 1ex minus .2ex}{.75ex plus .1ex}
+
+% Create Roman Numeral Labelled Annexes
+\newcommand{\annexname}{Anexos}
+\makeatletter % treat @ as a letter instead of a control word.
+\newcommand\annex{\par
+    \setcounter{chapter}{0}
+    \setcounter{section}{0}
+    \renewcommand\appendixname{Anexos}
+    \renewcommand\appendixpagename{Anexos}
+    \renewcommand{\appendixtocname}{Anexos}
+    \gdef\@chapapp{\annexname}
+%    \gdef\thechapter{\@Roman\c@chapter}
+    \gdef\thechapter{\@Alph\c@chapter}
+    \renewcommand{\theHchapter}{\annexname.\thechapter}
+    \addappheadtotoc
+}
+\makeatother
+
+\usepackage{alertmessage}
+
+\hyphenation{me-to-do-ló-gi-cos im-ple-men-ta-dos pre-li-mi-nar-men-te con-si-de-ra-cio-nes}
+
