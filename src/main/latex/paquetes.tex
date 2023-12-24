@@ -5,13 +5,13 @@
 
 
 %%% By Luixip
-\usepackage{graphicx}
+%\usepackage{graphicx}
 \usepackage{fancybox}
 \usepackage{color}
-\usepackage{float} % para usar [H] en figuras y tablas
+%\usepackage{float} % para usar [H] en figuras y tablas
 \usepackage[none]{hyphenat}
-\usepackage{amsmath}
-\usepackage{amssymb}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
 %\usepackage{wrapfig}
 \usepackage{wrapfig, blindtext}
 \usepackage[section]{placeins}
@@ -19,7 +19,7 @@
 \usepackage{pdfpages}
 %\usepackage{acronym}
 
-%\usepackage{ragged2e} % para justicar texto
+\usepackage{ragged2e} % para justicar texto
 
 %\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
 %\usepackage[table]{xcolor}
@@ -35,10 +35,10 @@
 \usepackage[footnotesize,labelfont=bf,up,textfont=it,up, center]{caption} % Custom captions under/above floats in tables or figures
 
 %\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
+%\usepackage{booktabs} % Horizontal rules in tables
 \usepackage{float} % Required for tables and figures in the multi-column environment - they
-\usepackage{graphicx} % paquete que permite introducir imágenes
-\usepackage{booktabs} % Horizontal rules in tables
+%\usepackage{graphicx} % paquete que permite introducir imágenes
+%\usepackage{booktabs} % Horizontal rules in tables
 %\usepackage{float} % Required for tables and figures in the multi-column environment - they
 
 \usepackage{ftnxtra} % Permite color los pie de página en el Caption de las figuras.
@@ -61,13 +61,13 @@
 
 %% Manejo de acrónimos
 \usepackage[acronym]{glossaries}
-%\makeglossaries
-%\makeglossaries
-%\glossarystyle{altlistgroup}
-%\input{glosario.tex}
-%\input{acronimos.tex}
-%\renewcommand{\glossaryname}{Glosario}
-%\renewcommand{\acronymname}{Acrónimos}
+\makeglossaries
+\makeglossaries
+\glossarystyle{altlistgroup}
+\input{glosario.tex}
+\input{acronimos.tex}
+\renewcommand{\glossaryname}{Glosario}
+\renewcommand{\acronymname}{Acrónimos}
 
 
 %%\usepackage{hyperref} % By luixip
@@ -115,3 +115,9 @@
 
 \hyphenation{me-to-do-ló-gi-cos im-ple-men-ta-dos pre-li-mi-nar-men-te con-si-de-ra-cio-nes}
 
+
+% Luixip: Evitar partir las palabras en latex
+%--------------------------------------------
+\pretolerance=10000
+\tolerance=10000
+%---------------------------------------------
